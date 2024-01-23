@@ -1,0 +1,68 @@
+.profile{
+width: 300px; 
+border-radius: 50%; 
+display:block; 
+margin-left:auto; 
+margin-right:auto
+}
+
+.title{
+    letter-spacing: -2px;
+    text-align:center
+}
+
+.content{
+    color : red
+}
+
+
+
+#special {
+    text-align: center;
+    color:black
+}
+.box {
+    width: 300px;
+    background-color: cadetblue;
+    margin: 10px;
+    padding: 40px;
+    border-radius: 15px;
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto;
+    font-size:13px;
+    color:white;
+    box-shadow: 5px 5px black;
+    
+}
+
+.container {
+    width : 800px;
+}
+
+.header {
+    width : 100%;
+    height : 100px;
+    background: aquamarine
+}
+
+.left-menu {
+    width : 20%;
+    height : 400px;
+    background-color : cornflowerblue;
+    float : left;
+}
+
+.right {
+    width : 80%;
+    height : 400px;
+    background-color: coral;
+    float : left;
+}
+
+.footer {
+    width : 100%;
+    height : 100px;
+    background-color: grey;
+    clear : both
+}
