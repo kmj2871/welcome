@@ -1,3 +1,13 @@
+div,input,textarea {
+/*    , , , 콤마를 통해 여러개(클래스명 등) 동일하게 적용할 수 있음*/
+/*    box-sizing: border-box;*/
+}
+
+
+body {
+    margin:0px;
+}
+
 .profile{
 width: 300px; 
 border-radius: 50%; 
@@ -164,5 +174,202 @@ margin-right:auto
     right:0;
     margin: auto;
     width: 120px;
+
+}
+
+.explain-box {
+    width: 80%;
+    max-width: 600px;
+/*    max-width, min-width, max-hegiht, min-height 등등 반응형레이아웃에 쓰임*/
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    background-color: #eee;
+    position : relative;
+    top : -40px;
+    box-sizing: border-box;
+/*   box-sizing : border-box 박스의 폭은 border 까지
+     box-sizing : content-box 박스의 폭은 padding 안쪽까지*/
+
+/*    z-index 값이 높을수록 앞에 온다.*/
+}
+
+.text-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 5px
+}
+
+input {
+/*    input[type=text]*/
+/*    input[속성명=속성값] 해당 속성값을 가지는것만 선택*/
+        padding: 10px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 5px
+}
+
+
+.form-background {
+    background-color: black;
+    padding:30px;
+}
+
+.form-white {
+    background-color: white;
+    padding:30px;
+    width:80%;
+    max-width:600px;
+    margin: auto;
+}
+
+.form-input {
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius : 5px;
+    box-sizing: border-box;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding : 10px;
+
+}
+
+.w-100 {
+    width:100%;
+    padding:10px;
+}
+
+.yellow-button {
+    padding:10px;
+    display: block;
+    margin-left: auto;
+    background-color: yellow;
+}
+
+td, th {
+/*    border:1px solid black;*/
+}
+
+.cartlist td, .cartlist th {
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
     
+}
+
+table {
+    border-collapse: collapse;
+/*  기본적으로 제공하는 틈이 존재하는데 없애기 위해 사용*/
+}
+
+.cart_back {
+    width:100%;
+    background-color: #c2d3de;
+    padding: 100px;
+}
+
+.cart_white {
+    background-color: aliceblue;
+}
+
+.cartlist {
+    width: 100%;
+    max-width: 700px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.cartlist th:nth-child(2){
+/*          th:nth-child(n) n번째 나오는 th를 의미*/
+    width: 4000px;
+}
+
+.cell-long {
+    width: 500px;
+}
+
+.cart_title {
+        width: 100%;
+    max-width: 700px;
+
+    padding-bottom: 10px;
+}
+
+.cart_bottom {
+    padding-top: 10px;
+    cursor: pointer;
+    text-decoration-line: underline;
+    display: block;
+}
+
+.cart_button {
+    padding :15px;
+    font-size:20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color:wheat;
+    cursor: pointer;
+    
+}
+.cart_button:hover{
+    background-color: chocolate;
+}
+.cart_button:focus{
+    background-color: gray;
+}
+.cart_button:active{
+    background-color: brown;
+    border: 2px solid black;
+}
+/*
+Pseudo-class 셀렉터 클래스명:~~
+:hover :focus :active 순서로 지정해줘야 매끄럽게 넘어감*/
+.input-test {
+    font-size: 20px;
+}
+.input-test:focus{
+    border-bottom: 2px solid red;
+}
+.custom-link {
+    text-decoration: none;
+    
+}
+.custom-link:link {
+    color: aqua;
+}
+.custom-link:visited{
+    color:black;
+}
+
+.main-btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.f-small {
+    font-size: 12px;
+}
+
+.f-mid {
+    font-size: 16px;
+}
+
+.f-lg {
+    font-size: 20px;
 }
