@@ -1,0 +1,100 @@
+@font-face{
+    font-family : 'nanumsquare';
+    src : url(../font/NanumSquareR.woff);
+/*    내가 준비한 폰트파일을 css에서 사용가능하게 등록하는과정
+        폰트용량줄이기 위해 .woff 파일 사용*/
+}
+
+body {
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 22px;
+}
+.main-background {
+    background-image: linear-gradient(to bottom, #499add, #4e61c0);
+    height : 550px;
+    padding : 20px;
+    color:white;
+    position:relative;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin : auto;
+    position : relative;
+}
+
+.main-text {
+    float : left;
+    margin-top:50px;
+}
+
+.main-iphone {
+    width : 400px;
+    float : right;
+    margin-top: 95px;
+      border-bottom: 2px solid black;
+            box-shadow: 2px 0px 0px 0px black;
+}
+
+.btn {
+    padding: 15px 20px;
+    font-size : 16px;
+/*    font-family : '';*/
+    font-weight: 600;
+    border : none;
+    border-radius: 5px;
+    cursor : pointer;
+}
+
+.btn-black {
+    background-color : #444;
+    color : white;
+}
+
+.btn-black:hover {
+    background-color : royalblue;
+}
+
+.btn-black:active {
+    background-color : dimgrey;
+}
+
+.service {
+    background-image: linear-gradient(to bottom, #499add, #4e61c0);
+    height : 550px;
+    padding : 20px;
+    color:white;
+}
+
+
+@media screen and (max-width : 992px) {
+    .main-iphone{
+        width: 260px;
+        display: block;
+        float : none;
+        margin: auto;
+        margin-top : 31px;
+        position : absolute;
+        left: 0;
+        right : 0;
+        border-bottom: 2px solid black;
+        box-shadow: 2px 0px 0px 0px black;
+    
+        
+    }
+    .main-text {
+        float:none;
+        margin-top :50px;
+        text-align: center;
+    }
+}
