@@ -1,0 +1,605 @@
+@font-face{
+    font-family : '이쁜폰트';
+    src : url(../font/NanumSquareR.woff);
+/*    내가 준비한 폰트파일을 css에서 사용가능하게 등록하는과정
+        폰트용량줄이기 위해 .woff 파일 사용*/
+}
+
+
+div,input,textarea {
+/*    , , , 콤마를 통해 여러개(클래스명 등) 동일하게 적용할 수 있음*/
+/*    box-sizing: border-box;*/
+}
+
+
+body {
+    margin:0px;
+    font-family: 'gulim';
+/*  font-family: '이쁜폰트'*/
+
+}
+
+p, h4, h3, h2, h1, span{
+    transform: rotate(0.03deg);
+}
+
+.profile{
+width: 300px; 
+border-radius: 50%; 
+display:block; 
+margin-left:auto; 
+margin-right:auto
+}
+
+.title{
+    letter-spacing: -2px;
+    text-align:center
+}
+
+.content{
+    color : red
+}
+
+
+
+#special {
+    text-align: center;
+    color:black
+}
+.box {
+    width: 300px;
+    background-color: cadetblue;
+    margin: 10px;
+    padding: 40px;
+    border-radius: 15px;
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto;
+    font-size:13px;
+    color:white;
+    box-shadow: 5px 5px black;
+    
+}
+
+.container {
+    width : 800px;
+    display : block;
+    margin-left:auto; 
+    margin-right:auto;
+    
+    
+}
+
+.header {
+    width : 100%;
+    height : 100px;
+    background: aquamarine
+}
+
+.left-menu {
+    width : 20%;
+    height : 400px;
+    background-color : cornflowerblue;
+    float : left;
+/*    display : inline-block;*/
+}
+
+.right {
+    width : 80%;
+    height : 400px;
+    background-color: coral;
+    float : left;
+/*     display : inline-block;*/
+/*    display : block(한행을 전부 차지)
+      display : inline-block(내 크기만큼 차지, <div>사이에 공백이 없어야함.*/
+}
+
+.footer {
+    width : 100%;
+    height : 100px;
+    background-color: grey;
+    clear : both
+}
+
+.prac-name {
+    width : 80%;
+    height : 50px;
+/*    background-color: red;*/
+    float : left;
+}
+
+.prac-img{
+    width: 20%;
+    height : 150px;
+    float : left;
+/*    margin-left: 10px;*/
+}
+
+.prac-content{
+    width : 100%;
+    height : ;
+    background-color: darkgrey;
+    clear : both;
+    padding-left: 5px;
+    padding-top: 1px;
+    
+
+}
+
+.profile1 {
+    width : 20%;
+    border-radius: 70%;
+    padding-top: 5px;
+    padding-left: 10px;
+    float : left;
+}
+
+
+.navbar li {
+    display:inline-block;
+    width : 60px;
+    text-align: center;
+    background: #eee;
+    padding : 10px;
+    border-radius: 20px;
+}
+
+.navbar a {
+    font-size: 16px;
+    text-decoration: none;
+}
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image : url(../img/shoes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(83%);
+    padding: 1px;
+    position:relative;
+}
+
+.main-title {
+    color:white;
+    font-size:40px;
+    margin-top:100px;
+    text-align: center;
+}
+
+.main-content {
+    color:white;
+    font-size:16;
+    font-style: oblique;
+    text-align: center;
+}
+
+.main-button {
+    font-size: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+/*  좌표속성 사용하기 위해서 position (relative) 는 원래 위치를 기준으로 이동, 공중에 뜸*/
+/*  position: absolute <- 내 부모 태그중에 position:relative 가진 부모 기준*/
+/*    position:static (좌표이동x)
+      position:fixed (화면고정) 화면에 달라붙는 요소 구성 가능 */
+    left:0;
+    right:0;
+    margin: auto;
+    width: 120px;
+
+}
+
+.explain-box {
+    width: 80%;
+    max-width: 600px;
+/*    max-width, min-width, max-hegiht, min-height 등등 반응형레이아웃에 쓰임*/
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    background-color: #eee;
+    position : relative;
+    top : -40px;
+    box-sizing: border-box;
+/*   box-sizing : border-box 박스의 폭은 border 까지
+     box-sizing : content-box 박스의 폭은 padding 안쪽까지*/
+
+/*    z-index 값이 높을수록 앞에 온다.*/
+}
+
+.text-input {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 5px
+}
+
+input {
+/*    input[type=text]*/
+/*    input[속성명=속성값] 해당 속성값을 가지는것만 선택*/
+        padding: 10px;
+    font-size: 20px;
+    border: 2px solid;
+    border-radius: 5px
+}
+
+
+.form-background {
+    background-color: black;
+    padding:30px;
+}
+
+.form-white {
+    background-color: white;
+    padding:30px;
+    width:80%;
+    max-width:600px;
+    margin: auto;
+}
+
+.form-input {
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius : 5px;
+    box-sizing: border-box;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding : 10px;
+
+}
+
+.w-100 {
+    width:100%;
+    padding:10px;
+}
+
+.yellow-button {
+    padding:10px;
+    display: block;
+    margin-left: auto;
+    background-color: yellow;
+}
+
+td, th {
+/*    border:1px solid black;*/
+}
+
+.cartlist td, .cartlist th {
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+    
+}
+
+table {
+    border-collapse: collapse;
+/*  기본적으로 제공하는 틈이 존재하는데 없애기 위해 사용*/
+}
+
+.cart_back {
+    width:100%;
+    background-color: #c2d3de;
+    padding: 100px;
+}
+
+.cart_white {
+    background-color: aliceblue;
+}
+
+.cartlist {
+    width: 100%;
+    max-width: 700px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.cartlist th:nth-child(2){
+/*          th:nth-child(n) n번째 나오는 th를 의미*/
+    width: 4000px;
+}
+
+.cell-long {
+    width: 500px;
+}
+
+.cart_title {
+        width: 100%;
+    max-width: 700px;
+
+    padding-bottom: 10px;
+}
+
+.cart_bottom {
+    padding-top: 10px;
+    cursor: pointer;
+    text-decoration-line: underline;
+    display: block;
+}
+
+.cart_button {
+    padding :15px;
+    font-size:20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color:wheat;
+    cursor: pointer;
+    
+}
+.cart_button:hover{
+    background-color: chocolate;
+}
+.cart_button:focus{
+    background-color: gray;
+}
+.cart_button:active{
+    background-color: brown;
+    border: 2px solid black;
+}
+/*
+Pseudo-class 셀렉터 클래스명:~~
+:hover :focus :active 순서로 지정해줘야 매끄럽게 넘어감*/
+.input-test {
+    font-size: 20px;
+}
+.input-test:focus{
+    border-bottom: 2px solid red;
+}
+.custom-link {
+    text-decoration: none;
+    
+}
+.custom-link:link {
+    color: aqua;
+}
+.custom-link:visited{
+    color:black;
+}
+
+.main-btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.f-small {
+    font-size: 12px;
+}
+
+.f-mid {
+    font-size: 16px;
+}
+
+.f-lg {
+    font-size: 20px;
+}
+
+.flex-item {
+    width: 100px;
+    height: 200px;
+    background-color: burlywood;
+    font-size: 30px;
+    text-align: center;
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 수평 가운데 정렬 */
+ 
+
+
+}
+
+.flex-container {
+    display: flex; 
+/*    가로정렬: flex*/
+/*    justify-content: center;*/
+/*    end,center,between 등 배치가능*/
+/*    flex-direction: column; 세로배치*/
+/*    flex-direction: row;*/
+/*    반응형으로 디자인할때 row colum 등등 사용*/
+/*    flex: wrap;  <-- width 가 크면 밑으로 보내고 싶을때 사용*/
+/*
+    align-items: center;
+    justify-content: center;
+*/
+/*    상하정렬*/
+       align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 5px;
+    background-color: burlywood;
+    
+}
+
+.nav-item {
+    width: 10%;
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.test {
+    width:100px;
+/* vw(브라우저 폭에 비례), rem10(html태그 폰트사이즈의 10배,rem20이면 20배 기본16px)
+    em(내 폰트사이즈에 비례)*/
+    height: 100px;
+/* vh(브라우저 높이에 비례)  */
+    background-color: gray;
+}
+
+.product-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* ::after 을 이용해서 div 맨뒤에 뭔가를 추가 할 수 있음 다양한 코드들*/
+.product-container::after{
+    content: '';
+    display:block;
+    clear: both;
+    float:none;
+}
+
+.product-container div{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+
+
+.product-container i {
+    background-color: burlywood;
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: white;
+    margin-top:10px;
+}
+
+.shop-bg {
+    background-color: #eee;
+    padding:20px;
+}
+
+.shop-container {
+    display : flex;
+    width : 90%;
+    margin :auto;
+}
+
+.shop-item {
+    width : 33%;
+    padding : 15px;
+}
+.shop-item img {
+    width : 100%;
+}
+
+.overlay {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition:  all 2s;
+
+    
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay-wrap {
+    position : absolute;
+    width : 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay-wrap:hover .overlay-black {
+    margin-top: 50%;
+}
+
+.overlay-black {
+    width:100%;
+    height : 100%;
+    background-color: rgba(0,0,0,0.3);
+    margin-top: 103%;
+    transition: all 1s;
+}
+
+.container {
+    
+}
+
+/*
+div.main-background .custom {
+    color: green;
+}
+
+div.main-background p.custom {
+    color: red;
+}
+*/
+
+/*specificity 점수 (앞에 div, p 등등 태그를해서 점수를 높여서 우선순위를 정함*/
+
+/*  (css 파을일 link 해주고)
+    main2.css 처럼 css파일을 하나 더 만들어서 작성한다
+    main2.css 파일이 더 밑에있기 때문에 가능(덮어씌운다)
+
+.custom{
+    color:aqua;
+}
+*/
+
+
+/*클래스명 뒤에 :: 로 pseudo-element 를 사용할 수 있다.
+::first-letter, ::first-line, ::after(내부 맨 뒤 뭔가 추가할 때), ::before(내부 맨 앞에 뭔가 추가 할 때) 등등*/
+.pseudo::first-line {
+    
+    color: red;
+    font-size: 30px;
+}
+
+/*media query문법은 페이지 가장아래 작성*/
+/*큰사이즈 -> 작은사이즈 순으로 작성할것*/
+/*현재브라우저 크기가 1200px 이하이면 아래 코드를 적용*/
+@media screen and (max-width: 1200px){
+    .main-title {
+        font-size: 30px;
+    }
+    .product-container div{
+        width: 50%;
+    }
+    .product-conatiner {
+        max-width: 700px;
+    }
+    .nav-item {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main-title{
+        font-size: 15px;
+    }
+    .product-container div{
+        width: 100%;
+    }
+}
+.input-file::file-selector-button{
+    background-color: skyblue;
+    border: none;
+    padding : 20px;
+    
+}
+
+/* :: 를 사용해도 뒤에 : 를 사용할 수 있다.*/
+.input-file::file-selector-button:hover{
+    background-color: blue;
+}
