@@ -8,6 +8,49 @@
     $기본사이즈 : 16px;
     // $(변수명) : 저장해서 쓸값;
 
+
+    // @extend 문법 class속 요소들을 복사해줌
+    // % 임시클래스 특징 : 단독으로 컴파일 되지않음
+%btn {
+    width : 100px;
+    height : 100px;
+    padding : 20px;
+}
+
+.btn-green{
+    @extend %btn;
+    color : green;
+}
+
+.btn-red{
+    @extend %btn;
+    color : red;
+}
+
+.btn-blue{
+    @extend %btn;
+    color : blue;
+}
+
+.main bg h4{
+    font-size: 16px;
+}
+
+.main-bg button {
+    color : red;
+}
+
+// nesting 문법 - 관련있는 class 묶을때 좋음
+.main-bg {
+    width : 100px;
+    h4 {
+        font-size : 16px;
+    }
+    button {
+        color : red;
+    }
+}
+
 .background {
     background-color: $메인컬러;
     font-size : $기본사이즈 - 2px;
