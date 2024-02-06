@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
 .btn-blue, .btn-red, .btn-green {
   width: 100px;
   height: 100px;
@@ -42,4 +50,20 @@
 .box {
   color: #eeeeee;
   font-size: 18px;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: brown;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: -1px;
 }/*# sourceMappingURL=test.css.map */
