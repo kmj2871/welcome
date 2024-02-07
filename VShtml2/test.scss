@@ -95,6 +95,54 @@ h4{
     @include 폰트스타일(20px)
 }
 
+// nesting 문법
+.sh-list {
+    li {
+    list-style: none;
+    padding : 15px;
+    border : 1px solid #eee;
+    }
 
+    .active {
+        background-color: skyblue;
+        color : white;
+    }
+}
 
+.alert-box-green{
+    padding : 10px;
+    border-radius: 5px;
+    border : 1px solid #eee;
+    background : green;
+    color : white;
+}
 
+.alert-box-orange{
+    @extend .alert-box-green;
+    background : orange;
+
+}
+
+.alert-box-blue{
+    @extend .alert-box-green;
+    background : blue;
+
+}
+
+div {
+    box-sizing: border-box;
+}
+
+@mixin column($구멍){
+    float : left;
+    width : $구멍;
+    padding : 15px;
+}
+
+.row .col-6{
+    @include column(50%)
+}
+
+.row .col-4{
+    @include column(33.33%)
+}
