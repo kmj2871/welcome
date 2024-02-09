@@ -603,3 +603,38 @@ div.main-background p.custom {
 .input-file::file-selector-button:hover{
     background-color: blue;
 }
+
+
+/*  애니메이션 넣을 때
+transform 사용시 rotate()기울기 translateX() X축으로 좌표이동
+                scale() 크기변화 */
+.ani-text {
+    text-align : center;
+}
+
+.ani-text:hover {
+    animation-name : 왔다갔다;
+    animation-duration: 1s;
+/*animation-delay : 딜레이 양
+  animation-iteration-count : 반복횟수
+  animation-timing-function : 베지어*/
+}
+
+/*복잡한 애니메이션 정의 @keyframes*/
+@keyframes 왔다갔다 {
+    0% {
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-100px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
