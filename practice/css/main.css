@@ -716,3 +716,58 @@ transform 사용시 rotate()기울기 translateX() X축으로 좌표이동
     transition : all 1s;
     transform: translateX(-150px);
 }
+
+.grey {
+    background-color : lightgrey;
+    height : 2000px;
+    margin-top : 500px;
+}
+
+.image {
+    float : right;
+    width : 400px;
+    position : sticky;
+    top : 100px;
+}
+
+.text {
+    float : left;
+    width : 300px;
+}
+
+.flip-outer {
+    width : 300px;
+    height: 300px;
+}
+
+.flip-inner {
+    width : 100%;
+    height: 100%;
+    position : relative;
+    transition : all 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-inner:hover{
+    transform: rotateY(180deg);
+}
+
+.front {
+    width : 100%;
+    position : absolute;
+    backface-visibility: hidden;
+    z-index : 1;   
+}
+
+.back {
+   
+    width : 100%;
+    background-color: yellow;
+    text-align: center;
+    position : absolute; /* 앞면 뒷면 배치는 position : absolute */
+    transform: rotateY(180deg);/*뒷면은 뒤집었을 때 정확히 보이도록 미리 디자인 할것*/
+    height: 100%;
+    border-radius: 50%;
+    padding-top : 50px;
+    box-sizing: border-box;
+}
