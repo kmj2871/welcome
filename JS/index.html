@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보에요</h1>
+        
+    <div class="alert-box" id="alert"><p id="title">알림창</p>
+        <button onclick="alertClose('none')">X</button> 
+        </div>
+        <button onclick="idAlert('아이디를 입력하세요.', 'block')">버튼1</button>
+        <button onclick="idAlert('비밀번호를 입력하세요.', 'block')">버튼2</button>
+        
+        
+        <script>
+        
+        document.getElementById('hello').innerHTML='안녕';
+    /* html문서 /~의/ID가 hello인 html요소를 가져와라(셀렉터)/ html내부의 / 그 요소를 '안녕'으로 변경 */
+    /* document.getElementById('???').???='???'; / ??? 부분에 원하는대로 넣어서 변경 */
+        document.getElementById('hello').style.color='red';
+        document.getElementById('hello').style.fontSize='16px';
+        document.getElementById('hi').innerHTML='JS 고수에요'; 
+            /* UI만드는 Step
+              1. HTML/CSS로 미리 디자인
+              2. 필요할 때 보여달라고 코드짜기 (자바스크립트로) */
+              
+        function alertOpen(구멍){
+            document.getElementById('alert').style.display= 구멍;
+        }
+            
+      function alertClose(구멍){
+            document.getElementById('alert').style.display=구멍;
+        }
+            
+      function idAlert(A,B){
+            document.getElementById('title').innerHTML=A;
+            document.getElementById('alert').style.display= B;
+      }
+            
+      function pwAlert(){
+            document.getElementById('title').innerHTML='비밀번호를 입력하세요.';
+            document.getElementById('alert').style.display= 'block';
+      }
+            
+        </script>
+        
+        
+    </body>
+
+
+</html>
