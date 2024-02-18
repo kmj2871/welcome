@@ -10,8 +10,8 @@
     <h1 id="hello">안녕하세요</h1>
     <h1 id="hi">JS 초보에요</h1>
         
-    <div class="alert-box" id="alert"><p id="title">알림창</p>
-        <button onclick="alertClose('none')">X</button> 
+    <div class="alert-box" id="alert"><p class="title1">알림창</p> <!--class 는 중복해서 사용가능-->
+        <button id="close">X</button> 
         </div>
         <button onclick="idAlert('아이디를 입력하세요.', 'block')">버튼1</button>
         <button onclick="idAlert('비밀번호를 입력하세요.', 'block')">버튼2</button>
@@ -38,7 +38,7 @@
         }
             
       function idAlert(A,B){
-            document.getElementById('title').innerHTML=A;
+            document.getElementsByClassName('title1')[0].innerHTML=A; /*클래스를 사용하면 뒤에 인덱싱을 해야함 [0],[1]*/
             document.getElementById('alert').style.display= B;
       }
             
@@ -46,6 +46,14 @@
             document.getElementById('title').innerHTML='비밀번호를 입력하세요.';
             document.getElementById('alert').style.display= 'block';
       }
+            //이벤트 리스너를적용할 id찾기      . 이벤트리스너 함수 찾기(파라미터 입력, 파라미터 자리에 함수를 넣으면 콜백함수라 함.(순차적으로 작용하기위해))
+            document.getElementById('close').addEventListener('click', function(){
+                document.getElementById('alert').style.display='none';
+            });
+            
+            function alertOpen(구멍){
+            document.getElementById('alert').style.display= 구멍;
+        }
             
         </script>
         
