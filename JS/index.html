@@ -13,11 +13,24 @@
         <div class="black-bg">
             <div class="white-bg">
                 <h4>로그인하세요</h4>
-                <button class="btn btn-danger" id="close">닫기</button>
+                <form action="success.html">
+          <div class="my-3">
+            <input type="text" class="form-control">
+           </div>
+           <div class="my-3">
+             <input type="password" class="form-control">
+           </div>
+           <button type="submit" class="btn btn-primary">전송</button>
+           <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form> 
             </div>
         </div>
 
+        <script>
         
+            alert('안녕하세요')
+        
+        </script>
         
         <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
@@ -35,13 +48,17 @@
           <li class="list-group-item">A fourth item</li>
           <li class="list-group-item">And a fifth one</li>
         </ul>
-
+ <!--
         <p class="hello">안녕</p>
         <p class="hello">안녕</p>
         <p class="hello">안녕</p>
         <button id="test-btn">버튼</button>
+        -->
         
-        <button id="login">로그인</button>
+        <div class="main-bg">
+            <h4>Shirts on Sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+            </div>
         
    <!-- <h1 id="hello">안녕하세요</h1>
     <h1 id="hi">JS 초보에요</h1>   
@@ -61,7 +78,7 @@
                     $('.black-bg').addClass('show-modal')
               })
             
-            $('.black-bg').on('click', function() {
+            $('#close').on('click', function() {
                 $('.black-bg').removeClass('show-modal')
             })
         
