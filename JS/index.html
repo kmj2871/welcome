@@ -19,7 +19,7 @@
             <input type="text" class="form-control" id="email">
            </div>
            <div class="my-3">
-             <input type="password" class="form-control">
+             <input type="password" class="form-control" id="password">
            </div>
            <button type="submit" class="btn btn-primary" id="send">전송</button>
            <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -29,11 +29,17 @@
 
         <script>
         
-            
-            
-            $('form').on('submit', function() {
+             $('form').on('submit', function() {
                 if(document.getElementById('email').value == ''){
-                   alert('아이디 입력안함')
+                   alert('아이디 입력안함');
+                   }
+            });
+            $('form').on('submit', function() {
+                if(document.getElementById('password').value == ''){
+                   alert('비밀번호 입력안함');
+                   }
+                else if(document.getElementById('password').value.length < 6){
+                   alert('비밀번호를 더 길게 입력하세요');
                    }
             });
         
