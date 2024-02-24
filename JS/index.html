@@ -9,6 +9,7 @@
     <link href="css/main.css" rel="stylesheet">
     
     <body>
+        
 
         <div class="black-bg">
             <div class="white-bg">
@@ -61,13 +62,37 @@
         
         <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-    <span class="navbar-brand">Navbar</span>
+    <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark">Dark 🔄</span>
     <button class="navbar-toggler" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
     </div>
         </nav> 
-        
+        <script>
+            
+            
+            
+           var count = 0;
+            $('.badge').on('click', function() {
+                count++;
+                if(count % 2 == 1){
+                    $('.badge').html('Light 🔄')
+                } else {
+                    $('.badge').html('Dark 🔄')
+                }
+            });
+            
+         //   badge 클릭횟수가 홀수면 내부 글자를 Light 로 변경
+         //   badge 클릭횟수가 짝수면 내부 글자를 Dark 로 변경
+            
+             /*var, let, const 변수의 차이점 
+            var 재선언O, 재할당O
+            let 재선언x, 재할당O
+            const 재선언x, 재할당x*/
+            
+            
+        </script>
         <ul class="list-group">
           <li class="list-group-item">An item</li>
           <li class="list-group-item">A second item</li>
