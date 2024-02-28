@@ -168,12 +168,46 @@
         </div>
         </div>
         
+        <button class="before">이전</button>
         <button class="slide-1">1</button>
         <button class="slide-2">2</button>
         <button class="slide-3">3</button>
+        <button class="next">다음</button>
         
         <script>
         
+            var 지금사진 = 1;
+            
+        /*$('.before').on('click', function(){
+            if(지금사진 == 2){
+                $('.slide-container').css('transform', 'translateX(00vw)');
+                지금사진--;
+            } else if(지금사진 == 3) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진--;
+            }
+        })  */  
+            
+        $('.before').on('click', function() {
+            $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
+            지금사진--;
+        })    
+            
+       /* $('.next').on('click', function() {
+            if(지금사진 == 1) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진++;
+               } else if(지금사진 == 2) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                지금사진++;
+                         }
+        })*/
+            
+            $('.next').on('click',function() {
+                    $('.slide-container').css('transform', 'translateX(-'+지금사진+'00vw)');
+                    지금사진 += 1;         
+            })
+            
         $('.slide-1').on('click',function(){
             $('.slide-container').css('transform', 'translateX(00vw)');
         })
@@ -185,6 +219,35 @@
         $('.slide-3').on('click',function(){
             $('.slide-container').css('transform', 'translateX(-200vw)');
         })
+            
+        </script>
+        
+        <script>
+        
+            console.log(vat(55555));
+            
+            function vat(a){
+                var num = (a * 1.1).toFixed(1);
+                return parseFloat(num)
+            }
+            
+            
+            console.log(함수(1,30))
+            
+            function seconds(a,b){
+                var result = (a * 60 + b) * 1000;
+                return result
+            }
+            
+            console.log(함수(70,false))
+            
+            function ten(a, b){
+                var result = a * 0.9;
+                if(b == true){
+                    result = result - 1.5;
+                }
+                return parseFloat(result.toFixed(2))
+            }
             
         </script>
         
