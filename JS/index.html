@@ -73,10 +73,8 @@
     </div>
         </nav> 
         <script>
-            
-            
-            
-           var count = 0;
+         
+         var count = 0;
             $('.badge').on('click', function() {
                 count++;
                 if(count % 2 == 1){
@@ -94,7 +92,13 @@
             let 재선언x, 재할당O
             const 재선언x, 재할당x*/
             
+            window.addEventListener('scroll', function() {
+               window.scrollY
+            });
             
+            $(window).on('scroll', function() {
+                $(window).scrollTop()
+            })
         </script>
         <ul class="list-group">
           <li class="list-group-item">An item</li>
@@ -153,6 +157,22 @@
             }, 1000);
             
         </script>
+        
+        <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+        </div>
+        
+        <script>
+        
+            //div의 스크롤바 내린양 + 눈에 보이는 div 높이 == div의 실제높이
+            $('.lorem').on('scroll', function(){
+               var 스크롤양 = document.querySelector('.lorem').scrollTop;
+                var 실제높이 = document.querySelector('.lorem').scrollHeight;
+                var 높이 = document.querySelector('.lorem').clientHeight;
+                console.log(실제높이);
+            })
+        
+        </script>
+        
         
         <div style="overflow: hidden">
         <div class="slide-container">
@@ -221,6 +241,9 @@
         })
             
         </script>
+        
+        <div style="height: 1000px"></div>
+        
         
         <script>
         
