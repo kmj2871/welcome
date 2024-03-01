@@ -70,10 +70,29 @@
     <button class="navbar-toggler" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
+        
     </div>
         </nav> 
+        <div class="progress"></div>
         <script>
          
+            window.addEventListener('scroll', function(){
+            const scrollTop = document.querySelector("html").scrollTop;
+            const scrollHeight = document.querySelector("html").scrollHeight;
+            const clientHeight = document.querySelector("html").clientHeight;
+
+            console.log("scrollTop: ", scrollTop);
+            console.log("clientHeight: ", clientHeight);
+            console.log("scrollHeight: ", scrollHeight);
+                
+                const progress = ((scrollTop + clientHeight) / scrollHeight) * 100;
+    
+                document.querySelector(".progress").style.width = progress + "%";
+
+          });
+
+            
+            
          var count = 0;
             $('.badge').on('click', function() {
                 count++;
@@ -164,13 +183,33 @@
         <script>
         
             //div의 스크롤바 내린양 + 눈에 보이는 div 높이 == div의 실제높이
-            $('.lorem').on('scroll', function(){
+            /*$('.lorem').on('scroll', function(){
                var 스크롤양 = document.querySelector('.lorem').scrollTop;
                 var 실제높이 = document.querySelector('.lorem').scrollHeight;
                 var 높이 = document.querySelector('.lorem').clientHeight;
                 console.log(실제높이);
+                바닥까지 스크롤했는지 검사 : 스크롤양 + 높이 == 실제높이
+            })*/
+            
+            $('.lorem').on('scroll', function(){
+               var 스크롤양 = document.querySelector('.lorem').scrollTop;
+                var 실제높이 = document.querySelector('.lorem').scrollHeight;
+                var 높이 = document.querySelector('.lorem').clientHeight;
+                if(스크롤양 + 높이 > 실제높이 - 10) {
+                    alert('다읽음')
+                }
             })
+            
         
+            $(window).on('scroll',function(){
+            if(window.scrollY > 100){
+                $('.navbar-brand').css('font-size', '25px');
+                } else {
+                $('.navbar-brand').css('font-size','30px');
+                }
+            })
+            
+            
         </script>
         
         
