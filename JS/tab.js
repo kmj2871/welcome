@@ -35,11 +35,20 @@ var 콘텐트 = $('.tab-content');
     콘텐트.eq(1).addClass('show');
 })*/
 
-for(let i=0; i<버튼.length; i++){
+/*for(let i=0; i<버튼.length; i++){
     버튼.eq(i).on('click', function() {
-    버튼.removeClass('orange');
-    버튼.eq(i).addClass('orange');
-    콘텐트.removeClass('show');
-    콘텐트.eq(i).addClass('show');
+    탭열기(i)
 });
+}*/
+
+$('.list').click(function(e){
+//       탭열기(지금 누른버튼에 숨겨져있는 data-id)
+    탭열기(e.target.dataset.id)
+})
+
+function 탭열기(숫자){
+    버튼.removeClass('orange');
+    버튼.eq(숫자).addClass('orange');
+    콘텐트.removeClass('show');
+    콘텐트.eq(숫자).addClass('show');
 }
