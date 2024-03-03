@@ -47,19 +47,21 @@
                    }
             });
         
+           
+            
          /*   document.getElementById('email').addEventListener('input',function() {
                 console.log('안녕')
             })*/
             
             // && 는 and 연산자 
-            if(1==1 && 2==2) {
+            /*if(1==1 && 2==2) {
                 console.log('안녕')
             }
             
             // || 는 or 연산자 
             if(1==1 || 2==2) {
                 console.log('안녕')
-            }
+            }*/
             
         </script>
         
@@ -284,7 +286,7 @@
         <div style="height: 1000px"></div>
         
         
-        <script>
+<!--        <script>
         
             console.log(vat(55555));
             
@@ -312,7 +314,7 @@
             }
             
         </script>
-        
+        -->
    <!-- <h1 id="hello">안녕하세요</h1>
     <h1 id="hi">JS 초보에요</h1>   
         
@@ -331,10 +333,26 @@
                     $('.black-bg').addClass('show-modal')
               })
             
+            
+            
             $('#close').on('click', function() {
                 $('.black-bg').removeClass('show-modal')
             })
         
+            document.querySelector('.black-bg').addEventListener('click',function(e){
+                
+            /*    e.target;       //유저가 실제로 누른것
+              //  console.log(e.target);
+                e.currentTarget;        //이벤트리스너 달린곳
+                this;
+                e.preventDefault(); 
+                e.stopPropagation();*/
+                
+                if(e.target == document.querySelector('.black-bg')) {
+                   document.querySelector('.black-bg').classList.remove('show-modal');
+                   }
+            })
+             
         //document.querySelector('.hello').innerHTML='바보';
         //$('.hello').html('바보');    
            // $('.hello').css('color', 'red');
