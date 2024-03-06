@@ -35,6 +35,48 @@
         
         </script>
         
+        <form class="container my-5 form-group">
+            <p>상품선택</p>
+            <select class="form-select mt-2">
+              <option>모자</option>
+              <option>셔츠</option>
+            </select>
+            <select class="form-select mt-2 form-hide">
+              <option>95</option>
+              <option>100</option>
+            </select>
+        </form>
+        
+        <script>
+        
+            
+            $('.form-select').eq(0).on('input', function(){
+                var value = $('.form-select').eq(0).val();
+                if(value == '셔츠'){
+           $('.form-select').eq(1).removeClass('form-hide');
+           } else {
+               $('.form-select').eq(1).addClass('form-hide');
+           }
+         })
+            
+         /*   $('.form-select').eq(0).on('input', function(e){
+                var value = e.currentTarget.value;
+                if(value == '셔츠'){
+           $('.form-select').eq(1).removeClass('form-hide');
+           }
+         })
+            
+            $('.form-select').eq(0).on('input', function(){
+                var value = this.value;
+                if(value == '셔츠'){
+           $('.form-select').eq(1).removeClass('form-hide');
+           }
+         })*/
+            
+            
+        
+        </script>
+        
         <div class="container mt-5">
           <ul class="list">
             <li class="tab-button" data-id="0">Products</li>
