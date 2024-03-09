@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    
+    <div class="item">장바구니페이지</div>
+
+    
+    <script>
+    
+      var 꺼낸거 =  JSON.parse(localStorage.getItem('cart'));
+      var 상품명 = `<p>${꺼낸거}</p>`
+      
+      if(꺼낸거 != null){
+       $('.item').append(상품명);
+      }
+    </script>
+    
+</body>
+
+</html>
