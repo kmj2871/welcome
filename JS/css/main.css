@@ -22,7 +22,7 @@
   height : 100%;
   position : fixed;
   background : rgba(0,0,0,0.5);
-  z-index : 5;
+  z-index : 20;
   padding: 30px;
   visibility: hidden;
   opacity: 0;
@@ -118,3 +118,25 @@
   .show {
     display: block;
   }
+
+.form-hide {
+    display : none;
+}
+
+.grey {
+    background-color : lightgrey;
+    height : 2000px;
+    margin-top : 500px;
+}
+
+.image {
+    float : right;
+    width : 50%;
+    position : sticky;
+    top : 100px;
+}
+
+.text {
+    float : left;
+    width : 40%;
+}
