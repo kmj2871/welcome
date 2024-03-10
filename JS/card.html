@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+ 
+        <div class="card-background">
+            <div class="card-box">
+                <img src="img/card1.png">
+            </div>
+            <div class="card-box">
+                <img src="img/card2.png">
+            </div>
+            <div class="card-box">
+                <img src="img/card3.png">
+            </div>
+            
+        </div>
+    
+        <script>
+    
+        $(window).scroll(function(){
+        var 높이 = $(window).scrollTop();
+            console.log(높이);
+            
+//            600~860 까지 스크롤바를 내리면 첫째카드의 opacity 1~0 으로 서서히 변경
+           /* var y = ???; // y 를 1차함수로 표현*/
+            /*y = a * 높이 + b;
+            1 = a * 600 +b;
+            0 = a * 860 +b;*/
+            
+            var y = (-1/260) * 높이 + 33077/10000;
+            /*a = -1/260;
+            b = 33077/10000*/
+              $('.card-box').eq(0).css('opacity', y);
+            
+           /* z=a * 높이 + b
+            1 = a * 600 + b
+            0.9 = a * 860 + b
+            높이가 600일때 z =1
+            높이가 860 일때 z=0.9*/
+            var z = (-0.1/260) * 높이 + 16/13;
+            $('.card-box').eq(0).css('transform', `scale( ${z})`);
+            
+            
+           /* 2~3번째 사진 높이 1060 ~ 1310
+            
+            1 = a * 1060 + b
+            0 = a * 1310 + b*/
+            
+            
+            var y2 = (-1/250) * 높이 + 5.24;
+            $('.card-box').eq(1).css('opacity', y2);
+            
+/*            1 = a * 1060 + b
+            0.9 = a * 1310 + b*/
+            let z2 = (-0.1/250) * 높이 + 1.4;
+            $('.card-box').eq(1).css('transform', `scale( ${z2})`);
+        });    
+            
+    </script>
+    
+</body>
+
+</html>

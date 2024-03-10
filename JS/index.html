@@ -83,9 +83,9 @@
             const scrollHeight = document.querySelector("html").scrollHeight;
             const clientHeight = document.querySelector("html").clientHeight;
 
-            console.log("scrollTop: ", scrollTop);
+           /* console.log("scrollTop: ", scrollTop);
             console.log("clientHeight: ", clientHeight);
-            console.log("scrollHeight: ", scrollHeight);
+            console.log("scrollHeight: ", scrollHeight);*/
                 
                 const progress = ((scrollTop + clientHeight) / scrollHeight) * 100;
     
@@ -218,7 +218,7 @@
         <div style="overflow: hidden">
         <div class="slide-container">
             <div class="slide-box">
-                <img src="img/car1.png">
+                <img src="img/car1.png" draggable ="false">
             </div>
             <div class="slide-box">
                 <img src="img/car2.png">
@@ -280,6 +280,25 @@
         $('.slide-3').on('click',function(){
             $('.slide-container').css('transform', 'translateX(-200vw)');
         })
+            
+            var 시작좌표 = 0;
+            var 눌렀을때 = false;
+            
+            $('.slide-box').eq(0).on('mousedown', function(e){
+                시작좌표 = e.clientX
+               눌렀을때 = true;
+            })
+            
+            $('.slide-box').eq(0).on('mousemove', function(e){
+                if(눌렀을때 == true){
+                $('.slide-container').css('transform',
+                            `translateX(${e.clientX-시작좌표}px)`)
+            }
+            });
+            
+            $('.slide-box').eq(0).on('mouseup', function(e){
+               눌렀을때 = false;
+            })
             
         </script>
         
