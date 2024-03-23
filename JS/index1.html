@@ -1,0 +1,83 @@
+<div></div>
+<button id="버튼">버튼</button>
+
+<script>
+    /*
+    //'use strict'; 엄격모드
+    
+    console.log(this)
+    
+    function 함수(){
+        console.log(this); // 1.this 그냥 스거나 일반 함수 안에서 쓰면 {window}
+    
+    함수();
+    
+    var 오브젝트 = {
+        data : 'Kim',
+        함수 : function(){
+            console.log(this)  // 2.this 오브젝트 내 함수에서 this 를 쓰면 그 함수를 가지고 있는 오브젝트를 뜻함.
+        }
+        
+    }
+    
+    오브젝트.data;
+    오브젝트.함수();
+    
+    //기존문법 : function(){}
+ //화살표문법 : () => {}
+    
+    var 오브젝트1 = {
+        data : {
+            함수 : () => {
+                console.log(this) // 3.this 
+            }
+        }
+    }
+    
+    오브젝트1.data.함수();  
+   
+    
+    var 어쩌구 = {}
+    
+    function 기계() {
+        this.이름 = 'Kim'
+    }
+    
+    var 오브젝트2 = new 기계(); */
+    
+    document.getElementById('버튼').addEventListener('click', 
+    function(e){
+        
+        //console.log(this); 
+        //console.log(e.currentTarget);
+        
+        var 어레이 = [1,2,3];
+        어레이.forEach(function(a){ //forEach 반복문은 forEach함수안에 콜백함수를 넣어서 사용
+            console.log(this); // a 는 어레이 안에 있는 하나하나의 데이터들
+        });
+        
+    });
+    
+    var 오브젝트3 = {
+        이름들 : ['김', '이', '박'],
+        함수 : function(){
+            console.log(this); // 오브젝트3 객체 반환
+            오브젝트3.이름들.forEach(function(){
+                console.log(this); // {window} 반환
+            })
+        }
+    }
+    
+    var 오브젝트4 = {
+        이름들 : ['김', '이', '박'],
+        함수 : function(){
+        console.log(this); // 오브젝트4 객체 반환
+        오브젝트4.이름들.forEach(() => { // arrow function 특징 : 내부의 this값 변화 x
+                                               //   (외부 this 그대로 재사용가능)
+                console.log(this); // 오브젝트4 객체 반환
+            })
+        }
+    }
+    
+    오브젝트3.함수();
+</script>
